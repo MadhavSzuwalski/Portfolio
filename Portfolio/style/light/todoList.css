@@ -1,0 +1,63 @@
+.todoList {
+  background-color: var(--color2);
+  border: solid var(--blue3) 5px;
+  box-shadow: #0071ce9e 0px 0px 12px 0px;
+}
+.todoList h1 {
+  color: white;
+}
+.todoList input {
+  color: white;
+  border-bottom: 1px solid var(--color9);
+  caret-color: white;
+}
+.todoList input:hover {
+  border-bottom: 2px solid var(--color4);
+}
+.todoList input:focus {
+  border-bottom: 2px solid white;
+}
+.todoList form label {
+  color: var(--color9);
+}
+#submitBtn {
+  border: 4px solid var(--blue3);
+  background-color: var(--blue3);
+  color: white;
+}
+#submitBtn:hover {
+  border: 4px solid var(--blue3);
+  background-color: var(--blue5);
+}
+.todoList ul li {
+  color: white;
+  background-color: var(--color11);
+  border: solid 2px var(--blue3);
+  box-shadow: #0071ce80 0px 0px 12px 0px;
+}
+.todoList ul li:hover {
+  scale: 1.01;
+  border: solid 2px var(--blue4);
+  background-color: var(--color2);
+}
+.todoList ul li input:before {
+  background-color: var(--blue3);
+}
+.todoList ul li button {
+  color: white;
+}
+.todoList ul li button:hover {
+  background-color: var(--blue4);
+}
+.todoList ul li .removeBtn:before {
+  background-color: var(--blue3);
+}
+.todoList ul li:hover .removeBtn:before {
+  background-color: var(--blue4);
+}
+.todoList ul li:hover .editBtn {
+  border: solid 2px var(--blue4);
+}
+.todoList .editBtn {
+  border: solid 2px var(--blue3);
+}

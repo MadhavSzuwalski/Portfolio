@@ -1,0 +1,16 @@
+#infoBox {
+  color: black;
+}
+canvas {
+  border: 1px solid black;
+  background-color: var(--color10);
+}
+.buttons button {
+  background-color: var(--color7);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 6px 2px;
+}
+.buttons button:hover {
+  border: 1px solid white;
+  scale: 0.95;
+}

@@ -1,0 +1,99 @@
+body {
+  background-color: var(--bcg-col);
+}
+header,
+nav {
+  background-color: black;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px 2px;
+}
+header {
+  color: white;
+}
+nav {
+  color: white;
+}
+nav > *:hover {
+  background-color: var(--bcg-col);
+}
+#myProjects:hover :nth-child(1) {
+  background-color: black;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px 2px;
+}
+#myProjects:hover :nth-child(2) {
+  background-color: black;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px 2px;
+}
+.projectsList:before {
+  background-color: white;
+}
+.contactShown,
+.settingsShown {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.contactShown > div,
+.settingsShown > div {
+  background-color: var(--bcg-col);
+  box-shadow: #00000080 0px 0px 12px 0px;
+}
+.contactShown > div > hr {
+  border: 1px solid var(--color3);
+}
+.contactShown div button:before,
+.contactShown div button:after,
+.settingsShown div button:before,
+.settingsShown div button:after {
+  background-color: var(--color3);
+}
+.contactShown div button:hover:before,
+.contactShown div button:hover:after,
+.settingsShown div button:hover:before,
+.settingsShown div button:hover:after {
+  background-color: var(--color2);
+}
+.contactContents div a {
+  color: var(--color4);
+}
+.contactContents div a:hover {
+  color: white;
+}
+.contactContents label {
+  color: white;
+  color: var(--color2);
+}
+.contactContents div svg {
+  stroke: var(--color4) !important;
+  fill: var(--color4) !important;
+  color: var(--color4) !important;
+}
+.contactContents div svg g {
+  fill: var(--color4) !important;
+}
+#settings:hover {
+  background-color: transparent;
+}
+#settings svg {
+  height: 30px;
+  width: auto;
+  fill: white;
+  transition: 0.3s;
+}
+#settings:hover svg {
+  fill: var(--color2);
+}
+.settingsShown h2 {
+  color: var(--color9);
+}
+.settingsShown > div > hr {
+  border: 1px solid var(--color3);
+}
+.settingsShown div div label {
+  color: var(--color4);
+}
+.english :first-child,
+.polish :nth-child(2) {
+  box-shadow: rgba(255, 255, 255, 0.4) 0px 0px 20px 10px;
+}
+.english :nth-child(2):hover,
+.polish :first-child:hover {
+  box-shadow: rgba(255, 255, 255, 0.4) 0px 0px 10px 5px;
+}

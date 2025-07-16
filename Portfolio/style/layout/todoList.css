@@ -1,0 +1,138 @@
+#todoMain {
+  min-height: var(--main-height);
+  clear: both;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+}
+.todoList {
+  left: 50%;
+  min-height: 700px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  border-radius: 15px;
+}
+.todoList form {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.todoList input {
+  width: 80%;
+  background-color: inherit;
+  font-size: 20px;
+  border: none;
+  position: relative;
+}
+.todoList input:focus {
+  outline: none;
+}
+.todoList input::placeholder {
+  user-select: none;
+}
+.todoList form label {
+  font-size: 20px;
+  position: absolute;
+  user-select: none;
+  cursor: text;
+  transition: 0.2s;
+  transform: translateY(6px);
+}
+.todoList .todoLabel {
+  scale: 1.1;
+  color: red;
+  transform: translateX(5px) translateY(4px);
+}
+#todoInput:not(:placeholder-shown) + #todoLabel {
+  font-size: 0.85rem;
+  transform: translateY(-12px);
+}
+#submitBtn {
+  margin: 0 0 0 20px;
+  height: 30px;
+  width: 200px;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.todoList button:active {
+  scale: 0.96;
+}
+.todoList ul {
+  width: 100%;
+  list-style-type: none;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.todoList ul li {
+  width: 100%;
+  height: 40px;
+  padding: 3px 0 3px 3px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+.todoList ul li:hover {
+  scale: 1.01;
+}
+.todoList ul li input {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+  position: relative;
+  cursor: pointer;
+}
+.todoList ul li input:before {
+  content: "";
+  width: 1px;
+  height: 30px;
+  position: absolute;
+  top: -5px;
+  right: -13px;
+}
+.todoList ul li div {
+  margin-left: 16px;
+  width: calc(100% - 210px);
+  overflow: auto;
+}
+.todoList ul li button {
+  width: 80px;
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  transform: translateX(1px);
+  transition: 0.2s;
+}
+.todoList ul li .removeBtn:before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: 0.2s;
+}
+.todoList ul li:hover .removeBtn:before {
+  left: 0px;
+}
+.editBtn {
+  margin-left: 10px;
+  border-radius: 10px 0 0 10px;
+  transform: translateX(2px);
+}
+.removeBtn {
+  border-radius: 0 10px 10px 0;
+}

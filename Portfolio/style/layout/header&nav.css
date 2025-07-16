@@ -1,0 +1,326 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  height: 100vh;
+  width: auto;
+}
+#top {
+  height: var(--header-height);
+  width: 100%;
+  float: left;
+}
+header,
+nav {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+header {
+  float: left;
+  width: 40%;
+  font-size: 1.3rem;
+}
+header h1 {
+  margin-left: min(30px, 10%);
+  animation: slideIn 1s ease-out;
+  height: 60px;
+  padding: 5px 0;
+}
+header h1 img {
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+  transform: translateY(5px);
+}
+nav {
+  float: right;
+  width: 60%;
+  justify-content: flex-end;
+}
+nav > * {
+  cursor: pointer;
+  width: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--header-height);
+  transition: 0.3s;
+}
+#myProjects {
+  position: relative;
+}
+.projectsList {
+  display: none;
+}
+#myProjects:hover :nth-child(1) {
+  position: absolute;
+  cursor: pointer;
+  width: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--header-height);
+  transform: translateY(100%);
+  animation: dropAnimation 0.7s;
+}
+#myProjects:hover :nth-child(2) {
+  position: absolute;
+  cursor: pointer;
+  width: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--header-height);
+  transform: translateY(200%);
+  animation: dropAnimation 0.7s;
+}
+.projectsList:before {
+  content: "";
+  width: 0px;
+  height: 2px;
+  position: absolute;
+  top: 65%;
+  left: 0;
+  transition: 0.3s ease-out;
+}
+.projectsList:hover:before {
+  width: 50%;
+  transform: translateX(50%);
+}
+.contactHidden,
+.settingsHidden {
+  display: none;
+}
+.contactClosing,
+.settingsClosing {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  animation: popUpClose 0.29s;
+}
+.contactClosing *,
+.settingsClosing * {
+  display: none;
+}
+.contactShown,
+.settingsShown {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: popUp 0.5s;
+  z-index: 999;
+}
+.contactShown > div,
+.settingsShown > div {
+  height: 600px;
+  width: 500px;
+  border-radius: 10px;
+}
+.contactShown > div > hr {
+  content: "";
+  width: 90%;
+  border-radius: 1px;
+  top: 25px;
+  position: relative;
+  left: 5%;
+}
+.contactShown div button,
+.settingsShown div button {
+  float: right;
+  position: relative;
+  height: 30px;
+  width: 30px;
+  background-color: transparent;
+  border: none;
+  margin: 10px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.contactShown div button:active,
+.settingsShown div button:active {
+  scale: 0.9;
+}
+.contactShown div button:before,
+.contactShown div button:after,
+.settingsShown div button:before,
+.settingsShown div button:after {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+.contactShown div button:before,
+.settingsShown div button:before {
+  transform: rotate(45deg);
+}
+.contactShown div button:after,
+.settingsShown div button:after {
+  transform: rotate(-45deg);
+}
+.contactShown > div > img {
+  height: 120px;
+  width: auto;
+  margin-top: 30px;
+  margin-left: 190px;
+}
+.contactContents {
+  margin: 30px;
+}
+.contactContents div {
+  height: 25px;
+  font-size: 1.4rem;
+  margin: 70px 0;
+  position: relative;
+}
+.contactContents div svg {
+  width: 40px;
+  height: auto;
+  margin-right: 18px;
+}
+.contactContents div a {
+  text-decoration: none;
+}
+.contactContents div a:hover {
+  text-decoration: none;
+}
+.contactContents label {
+  font-size: 1.1rem;
+  position: absolute;
+  margin-left: 68px;
+}
+#settings {
+  width: 90px;
+}
+#settings svg {
+  height: 30px;
+  width: auto;
+  transition: 0.3s;
+}
+.settingsShown h2 {
+  clear: both;
+  width: 100%;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.settingsShown > div > hr {
+  content: "";
+  width: 90%;
+  border-radius: 1px;
+  top: 50px;
+  position: relative;
+  left: 5%;
+}
+.settingsShown > div > div {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+}
+.settingsShown div div label {
+  text-align: center;
+  font-size: 1.6rem;
+  padding-top: 40px;
+}
+#settingsLanguage,
+#colourTheme {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 120px;
+}
+#settingsLanguage img {
+  height: 80px;
+  width: auto;
+  border: 0px solid transparent;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+.english :nth-child(2):hover,
+.polish :first-child:hover {
+  scale: 0.95;
+}
+#colourTheme span {
+  height: 80px;
+  width: 80px;
+  transition: 0.3s;
+}
+.dark :first-child {
+  background-color: black;
+  border: 2px solid var(--color5);
+  border-radius: 25%;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 20px 10px;
+}
+.dark :nth-child(2) {
+  background-color: white;
+  border-radius: 25%;
+  box-shadow: rgba(255, 255, 255, 0.4) 0px 0px 4px 2px;
+  scale: 0.8;
+}
+.dark :nth-child(2):hover {
+  scale: 1;
+}
+
+.light :nth-child(2) {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 25%;
+  box-shadow: rgba(255, 255, 255, 0.4) 0px 0px 20px 10px;
+}
+.light :first-child {
+  background-color: black;
+  border-radius: 25%;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 4px 2px;
+  scale: 0.8;
+}
+.light :first-child:hover {
+  scale: 1;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-200%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes dropAnimation {
+  from {
+    background-color: transparent;
+  }
+}
+
+@keyframes popUp {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+@keyframes popUpClose {
+  from {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  to {
+    position: fixed;
+    background-color: transparent;
+  }
+}

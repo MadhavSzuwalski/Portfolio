@@ -1,0 +1,78 @@
+#aboutSideBar {
+  background-color: var(--color4);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 1px;
+}
+#aboutSideBar button {
+  color: black;
+  background-color: transparent;
+}
+#aboutSideBar button:hover {
+  background-color: var(--color5);
+  color: white;
+}
+#aboutSideBar button.sideButton.active {
+  color: white;
+  background-color: var(--color5);
+}
+#aboutTextArea {
+  background-color: var(--color4);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 1px;
+}
+#aboutTitle {
+  color: var(--blue);
+}
+
+.about1 {
+  color: var(--color7);
+}
+.about1 div b {
+  color: var(--color7);
+}
+
+.educationDates {
+  color: var(--color7);
+}
+.educationTitle {
+  color: var(--color6);
+}
+.educationInstitution {
+  color: var(--color7);
+}
+
+.job h2 {
+  color: var(--color7);
+}
+.meta {
+  color: var(--color5);
+}
+.about2 ul li {
+  color: var(--color6);
+}
+
+.about3 ul li {
+  color: var(--color6);
+}
+
+.competencies h2 {
+  color: var(--color8);
+}
+.competencies ul li {
+  color: var(--color7);
+}
+.competencies ul li p {
+  color: var(--color6);
+}
+
+.about5 div h2 {
+  color: var(--color7);
+}
+.about5 div div {
+  color: var(--color6);
+}
+
+#aboutTextContent::-webkit-scrollbar-track {
+  background: var(--color5);
+}
+#aboutTextContent::-webkit-scrollbar-thumb {
+  background: var(--color2);
+}

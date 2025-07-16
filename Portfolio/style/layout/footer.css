@@ -1,0 +1,29 @@
+footer {
+  width: 100%;
+  font-size: 1rem;
+  height: 60px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+footer:before {
+  content: "";
+  width: 95%;
+  height: 2px;
+  top: 0px;
+  position: absolute;
+}
+footer div a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+footer div a svg {
+  height: 25px;
+  width: auto;
+  margin-right: 3px;
+  margin-bottom: 3px;
+}

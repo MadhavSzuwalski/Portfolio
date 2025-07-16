@@ -1,0 +1,18 @@
+footer {
+  color: var(--color4);
+}
+footer:before {
+  background-color: var(--color7);
+}
+footer div a {
+  color: var(--color4);
+}
+footer div a svg {
+  color: var(--color4) !important;
+  stroke: var(--color4) !important;
+}
+footer div a:hover,
+footer div a:hover svg {
+  color: white !important;
+  stroke: white !important;
+}

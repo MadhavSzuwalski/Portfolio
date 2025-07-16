@@ -1,0 +1,73 @@
+#aboutSideBar {
+  background-color: var(--color8);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px 1px;
+}
+#aboutSideBar button {
+  color: white;
+  background-color: transparent;
+}
+#aboutSideBar button:hover {
+  background-color: var(--color7);
+}
+#aboutSideBar button.sideButton.active {
+  color: var(--blue);
+  background-color: var(--color7);
+}
+#aboutTextArea {
+  background-color: var(--color8);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px 1px;
+}
+#aboutTitle {
+  color: var(--blue);
+}
+
+.about1 {
+  color: var(--color4);
+}
+.about1 div b {
+  color: var(--color9);
+}
+.educationDates {
+  color: var(--color2);
+}
+.educationTitle {
+  color: var(--color4);
+}
+.educationInstitution {
+  color: var(--color2);
+}
+
+.job h2 {
+  color: white;
+}
+.meta {
+  color: var(--color2);
+}
+.about2 ul li {
+  color: var(--color4);
+}
+
+.about3 ul li {
+  color: var(--color4);
+}
+
+.competencies h2 {
+  color: white;
+}
+.competencies ul li {
+  color: var(--color4);
+}
+
+.about5 div h2 {
+  color: white;
+}
+.about5 div div {
+  color: var(--color4);
+}
+
+#aboutTextContent::-webkit-scrollbar-track {
+  background: var(--color7);
+}
+#aboutTextContent::-webkit-scrollbar-thumb {
+  background: var(--color5);
+}
